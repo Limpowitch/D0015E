@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://www.sm.luth.se/csee/courses/d0015e/f-webben/hammurabi.html -->
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Hammurabi</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script type="text/javascript" src="./Hammurabi_files/hammurabi.js.nedladdning">
+    </script>
+  </head>
+
+  <body onload="gameStart();">
+
+    <div id="Navigatorbar">
+        <div id="Title">
+          𝓞 𝓖𝓻𝓮𝓪𝓽 𝓗𝓪𝓶𝓶𝓾𝓻𝓪𝓫𝓲!
+          <div id="Flavourtext">
+            Visaste av alla
+          </div>
+        </div>
+    </div>
+
+    <div id="Categorybox">
+      <div id="Year">
+        <marquee><h2 id="year">Rapport för år: 1</h2></marquee>
+      </div>
+      <div id="Boxes">
+
+        <div id="Firstbox">
+        <ul id="people">
+          <li id="starved">Ihjälsvultna: 0</li>
+          <li id="newcomers">Inflyttade: 5</li>
+          <li id="population">Befolkning: 100</li>
+        </ul>
+
+        <ul id="economy">
+          <li id="acres">Tunnland: 1000</li>
+          <li id="bushels">Skäppor: 2800</li>
+          <li id="harvest">Skörd: 3</li>
+          <li id="rats">Råttor: 200</li>
+          <li id="price">Pris: 20</li>
+        </ul>
+        </div>
+
+        <div id="Secondbox">
+          <form>
+            <fieldset class="fieldset">
+              <legend>
+                Tunnland som ska säljas/köpas:
+                <span id="outputAcrestosellbuy">0</span>
+              </legend>
+              <input type="button" value="-" id="minusbuttonAcrestosellbuy" onclick="onChangeAcres(&#39;minusbuttonAcrestosellbuy&#39;);">
+              <input type="range" id="sliderAcrestosellbuy" onchange="onChangeAcres(&#39;sliderAcrestosellbuy&#39;);" min="-1000" max="140" step="1">
+              <input type="button" value="+" id="plusbuttonAcrestosellbuy" onclick="onChangeAcres(&#39;plusbuttonAcrestosellbuy&#39;);">
+            </fieldset>
+          
+            <fieldset class="fieldset">
+              <legend>
+                Mat till folket:
+                <span id="outputFeedpeople">0</span>
+              </legend>
+              <input type="button" value="-" id="minusbuttonFeedpeople" onclick="onChangeFeeding(&#39;minusbuttonFeedpeople&#39;);">
+              <input type="range" id="sliderFeedpeople" onchange="onChangeFeeding(&#39;sliderFeedpeople&#39;);" min="0" max="2800" step="1">
+              <input type="button" value="+" id="plusbuttonFeedpeople" onclick="onChangeFeeding(&#39;plusbuttonFeedpeople&#39;);">
+            </fieldset>
+          
+            <fieldset class="fieldset">
+              <legend>
+                Så med utsäde:
+                <span id="outputPlantwithseed">0</span>
+              </legend>
+              <input type="button" value="-" id="minusbuttonPlantwithseed" 
+              onclick="onChangePlanting(&#39;minusbuttonPlantwithseed&#39;);">
+              <input type="range" id="sliderPlantwithseed" onchange="onChangePlanting(&#39;sliderPlantwithseed&#39;);" min="0" max="1000" step="1">
+              <input type="button" value="+" id="plusbuttonPlantwithseed" onclick="onChangePlanting(&#39;plusbuttonPlantwithseed&#39;);">
+            </fieldset>
+          
+            <button type="button" onclick="gameStart();">
+              Restart
+            </button>
+      
+            <button type="button" id="emph" onclick="finishTurn();">
+              Detta är min order!
+            </button>
+
+            
+
+          </form>
+        </div>
+
+        <div id="Thirdbox">
+          𝐻𝒶𝓂𝓂𝓊𝓇𝒶𝒷𝒾 (𝒷𝒶𝒷𝓎𝓁𝑜𝓃𝒾𝓈𝓀𝒶 𝐻𝒶𝓂𝓂𝓊𝓇𝒶𝒷𝒾 𝑒𝓁𝓁𝑒𝓇 𝒜𝓂𝓂𝓊𝓇𝒶𝓅𝒾) 𝓋𝒶𝓇 𝓀𝓊𝓃𝑔 𝒾 𝐵𝒶𝒷𝓎𝓁𝑜𝓃
+          (𝓃𝓊𝓋𝒶𝓇𝒶𝓃𝒹𝑒 𝐼𝓇𝒶𝓀), 𝓉𝓇𝑜𝓁𝒾𝑔𝑒𝓃 𝓂𝑒𝓁𝓁𝒶𝓃 𝒸𝒾𝓇𝓀𝒶 𝟣𝟩𝟫𝟤 𝑜𝒸𝒽 𝟣𝟩𝟧𝟢 𝒻.𝒦𝓇. 
+          <br>
+          <br>
+          𝐻𝒶𝓃 𝑒𝒻𝓉𝑒𝓇𝓉𝓇ä𝒹𝒹𝑒 𝓈𝒾𝓃 𝒻𝒶𝓇, 𝓀𝓊𝓃𝑔 𝒮𝒾𝓃-𝓂𝓊𝒷𝒶𝓁𝓁𝒾𝓉.
+          <br>
+          𝒰𝓃𝒹𝑒𝓇 𝒷ö𝓇𝒿𝒶𝓃 𝒶𝓋 𝓈𝒾𝓃 𝓇𝑒𝑔𝑒𝓇𝒾𝓃𝑔𝓈𝓉𝒾𝒹 𝓋𝒶𝓇 𝒽𝒶𝓃 𝑒𝓃 𝒶𝓋 𝓂å𝓃𝑔𝒶 𝓂𝒾𝓃𝒹𝓇𝑒 𝓀𝓊𝓃𝑔𝒶𝓇 𝓈𝑜𝓂bushelstill
+          𝒽ä𝓇𝓈𝓀𝒶𝒹𝑒 ö𝓋𝑒𝓇 𝒹𝑒𝓁𝒶𝓇 𝒶𝓋 𝒹𝑒𝓉 𝓈𝑜𝓂 𝓈𝑒𝓃𝒶𝓇𝑒 𝒷𝓁𝑒𝓋 𝐵𝒶𝒷𝓎𝓁𝑜𝓃𝒾𝑒𝓃. 
+          <br>
+          <br>
+          𝐸𝒻𝓉𝑒𝓇 𝒸𝒾𝓇𝓀𝒶 𝟥𝟢 å𝓇 𝒶𝓋 𝓈𝒾𝓃 𝓇𝑒𝑔𝑒𝓇𝒾𝓃𝑔𝓈𝓉𝒾𝒹 𝓁𝓎𝒸𝓀𝒶𝒹𝑒𝓈 𝒽𝒶𝓃 𝓂𝑒𝒹 𝒽𝒿ä𝓁𝓅 𝒶𝓋 𝒶𝓁𝓁𝒾𝒶𝓃𝓈𝑒𝓇 𝑜𝒸𝒽
+          𝓀𝓇𝒾𝑔 𝓅å 𝓇𝑒𝓁𝒶𝓉𝒾𝓋𝓉 𝓀𝑜𝓇𝓉 𝓉𝒾𝒹 𝑒𝓇ö𝓋𝓇𝒶 𝐿𝒶𝓇𝓈𝒶 𝑜𝒸𝒽 𝒶𝓁𝓁𝒶 𝒶𝓃𝒹𝓇𝒶 𝓀𝓊𝓃𝑔𝒶𝓇𝒾𝓀𝑒𝓃 𝒾 𝒮𝓊𝓂𝑒𝓇
+          𝑜𝒸𝒽 𝒹𝑒𝓈𝓈𝓊𝓉𝑜𝓂 ä𝓋𝑒𝓃 𝑀𝒶𝓇𝒾 𝒾 𝓃𝑜𝓇𝒹𝓋ä𝓈𝓉 𝓈𝒶𝓂𝓉 𝓈𝓉ä𝒹𝑒𝓇 𝒾 𝒜𝓈𝓈𝓎𝓇𝒾𝑒𝓃.<br>
+          <br>
+          𝐼 𝑜𝒸𝒽 𝓂𝑒𝒹 𝒹𝑒𝓉 𝒷𝓁𝑒𝓋 𝐵𝒶𝒷𝓎𝓁𝑜𝓃 𝑒𝓉𝓉 𝓋𝒾𝓀𝓉𝒾𝑔𝓉 𝒸𝑒𝓃𝓉𝓇𝓊𝓂.
+        </div>
+
+
+        <div id="Fourthbox">
+            Spelet varar i 10 år, därav 1 år går mellan varje tur.
+            <br>
+            <br>
+            Varje år, så anger du hur många skäppor säd som ska allokeras till att köpa 
+            (eller sälja) land, mata din befolkning, och plantera mer säd inför nästa år,
+            <br>
+            <br>
+            Varje invånare behöver 20 säd för att överleva,
+            och kan bruka som mest 10 m^2 av land.
+            <br>
+            <br>
+            Varje m^2 av land behöver 1 säd.
+            <br>
+            <br>
+            Värdet av varje m^2 av land varierar mellan 17 till 26 säd.
+            <br>
+            <br>
+            Om förhållandeskapet i landet blir allt för dåligt,
+            så kommer ditt folk att störta dig och du förlorar.
+            <br>
+            <br>
+            Om du klarar dig 11 år, så kommer ditt styrande att granskas,
+            därefter du blir rankad mot stora ledare genom historien.
+        
+        </div>
+  
+
+
+</body></html>

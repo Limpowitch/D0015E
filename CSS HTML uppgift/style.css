@@ -1,0 +1,104 @@
+body{
+  background-image: url(Background.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+#Navigatorbar{
+  background-image: url(Marble.jpg);
+  width:50%;
+  padding:5px;
+  left:25%;
+  box-shadow: 5px 5px 8px black;
+  border-radius: 8px;
+  position:fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+
+#Title{
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2em;
+  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+font-family: 'Playfair Display', serif;
+  
+}
+
+#Flavourtext{
+  padding: 5px;
+  font-size: 75%;
+  background-color: green;
+  text-align: center;
+  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+font-family: 'Playfair Display', serif;
+}
+
+
+
+
+
+#Categorybox{
+  background-image: url(Papyrus.jpg);
+  background-size: cover;
+  width:50%;
+  padding:5px;
+  left: 25%;
+  overflow: auto;
+  border-radius: 8px;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height:fit-content;
+  min-height:40vw;
+  margin-top: 90px;
+  z-index: -1000;
+  align-self: center;
+}
+
+#Year{
+  
+  text-align: center;
+  font-size: 1.7em;
+  letter-spacing: 3px;
+
+}
+
+#Boxes{
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: auto 44vh;
+}
+
+#people{
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#economy{
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#Thirdbox{
+  font-size: 1.3em;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+#Fourthbox{
+  font-size: 1em;
+  padding: 5px;
+}
