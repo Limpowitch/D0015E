@@ -1,3 +1,5 @@
+/* <!-- Tim Rosendahl, 0008086837 --> */
+
 body{
   background-image: url(Background.jpg);
   background-size:cover;
@@ -24,7 +26,8 @@ body{
   margin-left: auto;
   margin-right: auto;
   font-size: 2em;
-  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%,
+   #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #fff;
@@ -37,7 +40,8 @@ font-family: 'Playfair Display', serif;
   font-size: 75%;
   background-color: green;
   text-align: center;
-  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%,
+   #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #fff;
